@@ -19,6 +19,7 @@ x.y.z Release notes (yyyy-MM-dd)
     }];
     [realm cancelAsyncTransaction:asyncTransactionId];
 ```
+* Add Combine API support for flexible sync beta.
 
 ### Fixed
 * <How to hit and notice issue? what was the impact?> ([#????](https://github.com/realm/realm-swift/issues/????), since v?.?.?)
