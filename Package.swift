@@ -3,8 +3,8 @@
 import PackageDescription
 import Foundation
 
-let coreVersionStr = "11.11.0"
-let cocoaVersionStr = "10.24.0"
+let coreVersionStr = "11.12.0"
+let cocoaVersionStr = "10.24.2"
 
 let coreVersionPieces = coreVersionStr.split(separator: ".")
 let coreVersionExtra = coreVersionPieces[2].split(separator: "-")
@@ -128,7 +128,7 @@ let package = Package(
             targets: ["Realm", "RealmSwift"]),
     ],
     dependencies: [
-        .package(name: "RealmDatabase", path: "../core-socket-plumbing")
+        .package(name: "RealmDatabase", path: "../realm-core-networking")
     ],
     targets: [
       .target(
