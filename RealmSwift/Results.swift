@@ -144,7 +144,7 @@ extension Projection: KeypathSortable {}
  Results instances cannot be directly instantiated.
  */
 @frozen public struct Results<Element: RealmCollectionValue>: Equatable, RealmCollectionImpl {
-    internal let collection: RLMCollection
+    public let collection: RLMCollection
 
     /// A human-readable description of the objects represented by the results.
     public var description: String {
@@ -168,6 +168,7 @@ extension Projection: KeypathSortable {}
     public subscript(position: Int) -> Element {
         throwForNegativeIndex(position)
         return staticBridgeCast(fromObjectiveC: collection.object(at: UInt(position)))
+        self.observe(<#T##block: @escaping (RealmCollectionChange<Results<Element>>) -> Void##@escaping (RealmSwift.RealmCollectionChange<RealmSwift.Results<Element>>) -> Swift.Void#>)
     }
 
     // MARK: Equatable
